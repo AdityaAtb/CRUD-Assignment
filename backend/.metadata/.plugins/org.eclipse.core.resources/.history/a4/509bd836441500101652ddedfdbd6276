@@ -1,0 +1,5 @@
+package com.heaptrace.user.dto;
+
+public class UserUpdateDto {
+
+}

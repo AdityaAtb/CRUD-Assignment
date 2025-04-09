@@ -1,0 +1,12 @@
+package com.heaptrace.user.service;
+
+import com.heaptrace.user.dto.ApiResponse;
+import com.heaptrace.user.dto.UserRegisterDto;
+
+public interface UserService {
+
+	ApiResponse registerUser(UserRegisterDto userRegisterDto);
+
+	List<User> listUsers();
+	
+}

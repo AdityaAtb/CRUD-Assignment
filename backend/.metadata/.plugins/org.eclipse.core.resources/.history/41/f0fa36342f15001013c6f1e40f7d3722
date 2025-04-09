@@ -1,0 +1,11 @@
+package com.heaptrace.user.dao;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.heaptrace.user.entity.User;
+
+public interface UserDao extends JpaRepository<User, Long> {
+	boolean existsByEmail(String email);
+}

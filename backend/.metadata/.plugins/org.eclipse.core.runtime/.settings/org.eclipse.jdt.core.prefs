@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+org.eclipse.jdt.core.classpathVariable.JRE_LIB=/usr/lib/jvm/jdk-21.0.6-oracle-x64/lib/jrt-fs.jar
+org.eclipse.jdt.core.classpathVariable.JRE_SRC=/usr/lib/jvm/jdk-21.0.6-oracle-x64/lib/src.zip
+org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
+org.eclipse.jdt.core.classpathVariable.M2_REPO=/home/aditya-atbhiya/.m2/repository
+org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
