@@ -1,5 +1,0 @@
-package com.heaptrace.user.GlobalException;
-
-public class GlobalExceptionHandler {
-
-}

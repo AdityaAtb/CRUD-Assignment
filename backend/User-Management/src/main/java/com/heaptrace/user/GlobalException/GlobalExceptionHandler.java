@@ -13,6 +13,12 @@ import com.heaptrace.user.exception.ResourceNotFoundException;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 	
+	@ExceptionHandler(Exception.class)
+	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
+	public ApiResponse handleException(Exception e) {
+		return new ApiResponse(e.getMessage());
+	}
+	
 	@ExceptionHandler(RuntimeException.class)
 	@ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
 	public ApiResponse handleRuntimeException(RuntimeException e) {

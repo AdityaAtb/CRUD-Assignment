@@ -1,5 +1,0 @@
-package com.heaptrace.user.dto;
-
-public class ApiResponse {
-
-}

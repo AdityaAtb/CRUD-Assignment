@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-    <typeInfo handle="=User-Management/\/home\/aditya-atbhiya\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/3.4.4\/spring-data-jpa-3.4.4.jar=/maven.pomderived=/true=/=/org.eclipse.jst.component.archivename=/spring-data-jpa-3.4.4.jar=/=/maven.groupId=/org.springframework.data=/=/maven.artifactId=/spring-data-jpa=/=/maven.version=/3.4.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/=/org.eclipse.jst.component.dependency=/\/WEB-INF\/lib=/&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1741937390000"/>
-    <typeInfo handle="=User-Management/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.heaptrace.user.service{UserService.java[UserService" modifiers="513" timestamp="1744194962544"/>
+    <typeInfo handle="=User-Management/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.heaptrace.user.service{UserService.java[UserService" modifiers="513" timestamp="1744365213000"/>
 </typeInfoHistroy>

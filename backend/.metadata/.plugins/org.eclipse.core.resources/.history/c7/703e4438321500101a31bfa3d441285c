@@ -1,5 +1,0 @@
-package com.heaptrace.user.exception;
-
-public class FieldNotAvailableException {
-
-}

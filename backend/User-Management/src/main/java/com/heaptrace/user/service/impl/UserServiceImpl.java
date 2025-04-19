@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.heaptrace.user.dao.UserDao;
 import com.heaptrace.user.dto.ApiResponse;
 import com.heaptrace.user.dto.UserRegisterDto;
+import com.heaptrace.user.dto.UserRegisterResponseDto;
 import com.heaptrace.user.dto.UserUpdateDto;
 import com.heaptrace.user.entity.User;
 import com.heaptrace.user.exception.FieldNotAvailableException;
@@ -25,14 +26,14 @@ public class UserServiceImpl implements UserService {
 	private ModelMapper modelMapper;
 	
 	@Override
-	public ApiResponse registerUser(UserRegisterDto userRegisterDto) {
+	public UserRegisterResponseDto registerUser(UserRegisterDto userRegisterDto) {
 		if(userDao.existsByEmail(userRegisterDto.getEmail()))
 			throw new FieldNotAvailableException("Email already exists!");
 		
 		User user = modelMapper.map(userRegisterDto, User.class);
-		userDao.save(user);
+		User u = userDao.save(user);
 		
-		return new ApiResponse("User registered successfully");
+		return new UserRegisterResponseDto("User registered successfully!", u.getId());
 	}
 
 	@Override
@@ -49,7 +50,7 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public User getSpecificUser(Long id) {
 		User u = userDao.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("User does not exists"));
+				.orElseThrow(() -> new ResourceNotFoundException("User does not exists!"));
 		
 		return u;
 	}
@@ -57,10 +58,10 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public ApiResponse updateUserDetails(Long id, UserUpdateDto userUpdateDto) {
 		User u = userDao.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("User does not exists"));
+				.orElseThrow(() -> new ResourceNotFoundException("User does not exists!"));
 		
 		if(userDao.existsByEmail(userUpdateDto.getEmail())) {
-			throw new FieldNotAvailableException("Email id already exists");
+			throw new FieldNotAvailableException("Email id already exists!");
 		}
 		
 		if(userUpdateDto.getFirstName().length() != 0)
